@@ -4,10 +4,7 @@ import os, sys, zipfile, subprocess, json
 here = os.path.dirname(os.path.abspath(__file__)); repo = os.path.dirname(here); data = os.path.join(repo, 'data')
 out = sys.argv[3]; os.makedirs(out, exist_ok=True)
 LINK = 'https://www.patreon.com/LiraelAtelier'
-NOTE = ("This was AI generated. I'm not into bestiality and won't subject myself to reviewing all of these\n"
-        "animations, so if anyone is willing to go through them all and make a proper mod, please be my guest.\n"
-        "This is just a crude add-on to help SkyrimNet NPCs, and I'm sure there are mistakes.\n"
-        "UNTESTED in game: I haven't run these and won't. This is merely to help those who are into it.\n")
+NOTE = 'WARNING: This is AI generated. I am not personally into this stuff so I am not going to be reviewing by hand every animation to ensure the descriptions and intents are correct. This is to hopefully give a temporary base for people to operate in Skyrimnet with until someone is willing to review each scene individually in game and hopefully make a proper version for everyone who is into this.\nThese patches are UNTESTED in game.\n'
 PACKS = [('fluffyfox', 'FluffyFox', 'FlufyFox OStim - Creatures', '0.5.2'),
          ('baka', 'Baka', 'OCreatures - Baka Animation Pack', '0.1-dev'),
          ('ocreatures', 'OCreatures', 'OCreatures Reforged', '1.9')]
@@ -20,7 +17,7 @@ for key, short, full, ver in PACKS:
     readme = f"""{short} SkyrimNet Patch for v{ver}
 by That Guy (Coronerra)
 
-NOTE: {NOTE}
+{NOTE}
 REQUIRES exactly: {full} v{ver} by Lirael Atelier - {LINK}
 This patch was generated from that exact version. It may not match other versions
 (new, renamed or removed scenes will be missing or wrong). Check for an updated patch first.
@@ -50,7 +47,7 @@ zp = os.path.join(out, 'Lirael_Creature_Packs_SkyrimNet_Intents_OPTIONAL.zip')
 readme = f"""Lirael Creature Packs - SkyrimNet Intents (OPTIONAL)
 by That Guy (Coronerra)
 
-NOTE: {NOTE}
+{NOTE}
 Covers exactly: Billyy Creatures COMPLETE v2.1.2, FlufyFox OStim - Creatures v0.5.2,
 OCreatures - Baka Animation Pack v0.1-dev (all by Lirael Atelier - {LINK}).
 Other versions may not match. Packs you don't have are simply ignored.

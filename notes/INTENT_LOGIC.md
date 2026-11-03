@@ -1,6 +1,8 @@
 # Intent logic
 
-> This was AI generated. I'm not into bestiality and won't subject myself to reviewing all of these animations, so if anyone is willing to go through them all and make a proper mod, please be my guest. This is just a crude add-on to help SkyrimNet NPCs, and I'm sure there are mistakes.
+> WARNING: This is AI generated. I am not personally into this stuff so I am not going to be reviewing by hand every animation to ensure the descriptions and intents are correct. This is to hopefully give a temporary base for people to operate in Skyrimnet with until someone is willing to review each scene individually in game and hopefully make a proper version for everyone who is into this.
+>
+> These patches are UNTESTED in game.
 
 The code is `tools/common.py` (`stage_signals`, `series_intent`) and `tools/gen.py`. Every stage's row in
 `data/<pack>_scenes.csv` has a `reason` column (the rule that fired and the tags or actions that triggered it),
