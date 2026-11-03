@@ -105,3 +105,17 @@ def series_intent(stages):
 
 def her_intents(stages):
     return [[t for t in j.get('tags', []) if t in INTENTS] for j in stages]
+
+
+# Canonical positions and aliases, copied from OStim Navigator 2.2.x SceneDescriptionData.h
+NAV_POSITIONS = ['missionary', 'butterfly', 'matingpress', 'piledriver', 'anvil', 'bridge', 'seashell', 'cowgirl', 'reversecowgirl', 'amazon', 'doggystyle', 'prone', 'standing', 'bodyguard', 'nelson', 'carry', 'spooning', 'scissors', 'pretzel', 'lap', 'lotus', 'reverselotus', 'facesitting', 'sixtynine', 'spitroast', 'wheelbarrow', 'idle']
+NAV_ALIASES = {'mating-press': 'matingpress', 'mating press': 'matingpress', 'pile-driver': 'piledriver', 'pile driver': 'piledriver', 'reverse-cowgirl': 'reversecowgirl', 'reverse cowgirl': 'reversecowgirl', 'rcg': 'reversecowgirl', 'girl on top': 'cowgirl', 'doggy': 'doggystyle', 'doggy-style': 'doggystyle', 'doggy style': 'doggystyle', 'prone bone': 'prone', 'prone-bone': 'prone', 'full nelson': 'nelson', 'fullnelson': 'nelson', 'spoon': 'spooning', 'scissoring': 'scissors', 'lap dance': 'lap', 'lapdance': 'lap', 'lotus position': 'lotus', 'reverse lotus': 'reverselotus', 'face-sitting': 'facesitting', 'face sitting': 'facesitting', 'queening': 'facesitting', '69': 'sixtynine', 'sixty-nine': 'sixtynine', 'sixty nine': 'sixtynine', 'spit-roast': 'spitroast', 'spit roast': 'spitroast', 'spitroasting': 'spitroast', 'wheel barrow': 'wheelbarrow', 'wheel-barrow': 'wheelbarrow', 'rest': 'idle', 'resting': 'idle'}
+
+
+def nav_positions(j):
+    """Same as OStim Navigator's AutoPopulatePositions: canonical positions from scene tags, order kept."""
+    out = []
+    for t in j.get('tags', []):
+        t = t.lower(); c = t if t in NAV_POSITIONS else NAV_ALIASES.get(t)
+        if c and c not in out: out.append(c)
+    return out

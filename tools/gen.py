@@ -109,7 +109,6 @@ def describe(j, stage, total):
     clim = [i for i, a in enumerate(A) if 'climaxing' in [t.lower() for t in a.get('tags', [])] and a.get('type')]
     if clim: fl.append('%s is climaxing' % name(A, clim[0]))
     for f in fl: out += ' ' + f[0].upper() + f[1:] + '.'
-    if total > 1: out += ' (Stage %d of %d.)' % (stage, total)
     return out, notes
 
 
@@ -128,7 +127,7 @@ def main(key, root, outd):
     ser = collections.defaultdict(list)
     for sid, (rel, j) in sc.items():
         b, n = series_of(sid); ser[b].append((n, sid, rel, j))
-    desc, intents, rows = {}, {}, []
+    desc, intents, rows, positions = {}, {}, [], {}
     existing = set()
     dd = os.path.join(root, 'SKSE', 'Plugins', 'OStimNet', 'animationsDescriptions')
     if os.path.isdir(dd):
@@ -153,6 +152,7 @@ def main(key, root, outd):
             d, notes = ('', [])
             if key != 'billyy' and sid not in existing:
                 d, notes = describe(j, n, len(st)); desc[sid] = d
+            if j.get('actions') and nav_positions(j): positions[sid.lower()] = nav_positions(j)
             stage_hers = [t for t in j.get('tags', []) if t in INTENTS]
             if acts and j.get('actions'):
                 if stage_hers: intents[sid.lower()] = stage_hers[0]
@@ -168,6 +168,7 @@ def main(key, root, outd):
     if key != 'billyy':
         json.dump(desc, open(os.path.join(outd, key + '_descriptions.json'), 'w', encoding='utf-8'), indent=2, ensure_ascii=False)
     json.dump(intents, open(os.path.join(outd, key + '_intents.json'), 'w'), indent=2, sort_keys=True)
+    json.dump(positions, open(os.path.join(outd, key + '_positions.json'), 'w'), indent=2, sort_keys=True)
     with open(os.path.join(outd, key + '_scenes.csv'), 'w', newline='', encoding='utf-8') as f:
         w = csv.DictWriter(f, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
     print(key, 'scenes', len(sc), 'series', len(ser), 'descriptions', len(desc), 'intents', len(intents),

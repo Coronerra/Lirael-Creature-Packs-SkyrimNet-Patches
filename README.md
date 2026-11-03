@@ -29,6 +29,11 @@ Built against a modified Nolvus 6.0.21 setup (OStim Navigator 2.2.0, OStimNet 2.
 See `docs/WHY.md`. Short version: one patch per pack and version, so each can be updated or dropped on its own,
 and nothing of hers is shipped, so Lirael can keep releasing without anyone redistributing or overriding her work.
 
+## Requirements
+What SkyrimNet/OStimNet need from animations and patches, and how to meet them: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md).
+
+If you used Billy's Merged Ostimnet Metadata v3 before, reinstall the Billyy pack to clear the old tags Navigator wrote into its scene files (see REQUIREMENTS.md section 5).
+
 ## Contents
 - `tools/` generator: `common.py` (intent rules), `gen.py` (descriptions, intents, CSV), `merge_meta.py`, `build.py`
 - `data/<pack>_scenes.csv` one row per stage: scene id, stage, actions, actors, her tags, intent, `reason`,

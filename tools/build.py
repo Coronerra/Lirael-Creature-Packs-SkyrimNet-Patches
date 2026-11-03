@@ -58,7 +58,8 @@ OCreatures Reforged 1.9 has only idle/intro scenes, so it gets no intents.
 
 OStim Navigator reads only ONE SKSE/Plugins/OStimNet/OStimNetMetaData.json, so this is a combined
 replacement of that file: all OStimNet 2.5.7 entries + all "Billy's Merged Ostimnet Metadata" v3 entries
-+ the new creature intents (which replace v3's blanket "lustful" on Billyy creature scenes).
++ the new creature intents (which replace v3's blanket "lustful" on Billyy creature scenes)
+If you used Billy v3 before, reinstall the Billyy pack: Navigator already wrote v3's tags into its scene files.
 
 Install order (MO2), top to bottom:
   OStimNet
