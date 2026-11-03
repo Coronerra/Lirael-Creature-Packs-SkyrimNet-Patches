@@ -68,9 +68,33 @@ To clean up (MO2):
    (stale scene files written by Navigator). Leave other Overwrite content alone.
 3. Reinstall each of her packs from the original zip (right-click the mod > Reinstall), so the scene files inside
    the mod folders are back to her originals.
-4. Install these patches (section 6) and start the game. Navigator writes the correct tags again on first load.
+4. Install these patches (section 4) and start the game. Navigator writes the correct tags again on first load.
 
-## 4. How to properly create files for OStimNet
+## 4. How to install, and load order
+
+Download from [Releases](https://github.com/Coronerra/Lirael-Creature-Packs-SkyrimNet-Patches/releases/latest).
+In MO2, install each zip as its own mod (Install a new mod from archive), then arrange the left pane:
+
+```
+OStim Standalone
+SkyrimNet
+OStimNet
+OStim Navigator
+(Billy's Merged Ostimnet Metadata v3 - DISABLED)
+OCreatures Reforged 1.9
+OCreatures_SkyrimNet_Patch_for_v1.9          <- directly below its pack
+OCreatures - Billyy Animation Pack COMPLETE 2.1.2
+FlufyFox OStim - Creatures 0.5.2
+FluffyFox_SkyrimNet_Patch_for_v0.5.2          <- directly below its pack
+OCreatures - Baka Animation Pack 0.1-dev
+Baka_SkyrimNet_Patch_for_v0.1-dev             <- directly below its pack
+Lirael_Creature_Packs_SkyrimNet_Intents_OPTIONAL  <- below OStimNet (and below v3 if you keep it)
+```
+
+Billyy needs no description patch. Then run Pandora/Nemesis as her packs require, and launch.
+To remove the optional intents, disable it (the tags Navigator already wrote stay; see section 3).
+
+## 5. How to properly create files for OStimNet
 
 As of November 2nd 2026, this is how to properly tag OSTIM animations for OSTIM net. Make sure to check if these rules have changed in the future builds.
 
@@ -90,7 +114,7 @@ As of November 2nd 2026, this is how to properly tag OSTIM animations for OSTIM 
 
 Full write-up: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md).
 
-## 5. The rules
+## 6. The rules
 
 - **Allowed intents** ([docs/Intents.md](https://github.com/tetherball88/OStimNet/blob/main/docs/Intents.md)):
   - `platonic` - non-sexual care (hugs, comfort). Care scenes only, never sex.
@@ -123,30 +147,6 @@ Sources: OStimNet [README](https://github.com/tetherball88/OStimNet), [Descripti
 [Intents.md](https://github.com/tetherball88/OStimNet/blob/main/docs/Intents.md), [Phases.md](https://github.com/tetherball88/OStimNet/blob/main/docs/Phases.md),
 [AnimationPacks.md](https://github.com/tetherball88/OStimNet/blob/main/docs/AnimationPacks.md); OStim Navigator source
 `OStimNetMetaData.cpp`, `SceneDatabase.cpp`, `SceneDescriptionData.h` ([repo](https://github.com/tetherball88/OStimNavigator)).
-
-## 6. How to install, and load order
-
-Download from [Releases](https://github.com/Coronerra/Lirael-Creature-Packs-SkyrimNet-Patches/releases/latest).
-In MO2, install each zip as its own mod (Install a new mod from archive), then arrange the left pane:
-
-```
-OStim Standalone
-SkyrimNet
-OStimNet
-OStim Navigator
-(Billy's Merged Ostimnet Metadata v3 - DISABLED)
-OCreatures Reforged 1.9
-OCreatures_SkyrimNet_Patch_for_v1.9          <- directly below its pack
-OCreatures - Billyy Animation Pack COMPLETE 2.1.2
-FlufyFox OStim - Creatures 0.5.2
-FluffyFox_SkyrimNet_Patch_for_v0.5.2          <- directly below its pack
-OCreatures - Baka Animation Pack 0.1-dev
-Baka_SkyrimNet_Patch_for_v0.1-dev             <- directly below its pack
-Lirael_Creature_Packs_SkyrimNet_Intents_OPTIONAL  <- below OStimNet (and below v3 if you keep it)
-```
-
-Billyy needs no description patch. Then run Pandora/Nemesis as her packs require, and launch.
-To remove the optional intents, disable it (the tags Navigator already wrote stay; see section 3).
 
 ## 7. What was changed and why
 
