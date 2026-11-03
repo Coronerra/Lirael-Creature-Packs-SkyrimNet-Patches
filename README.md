@@ -116,7 +116,7 @@ Full write-up: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md).
 
 ## 6. The rules
 
-- **Allowed intents** ([docs/Intents.md](https://github.com/tetherball88/OStimNet/blob/main/docs/Intents.md)):
+- **Allowed intents** ([docs/Intents.md](https://github.com/tetherball88/OStimNet/blob/master/docs/Intents.md)):
   - `platonic` - non-sexual care (hugs, comfort). Care scenes only, never sex.
   - `romantic` - emotional connection; picks romantic/lustful scenes.
   - `lustful` - physical desire, no emotional investment needed; picks lustful/romantic scenes.
@@ -143,9 +143,9 @@ Full write-up: [docs/REQUIREMENTS.md](docs/REQUIREMENTS.md).
   and OStimNet's phases use the action tags intercourse, oral, penilestimulation, fingering, toying,
   clitoralstimulation), and standard position tags.
 
-Sources: OStimNet [README](https://github.com/tetherball88/OStimNet), [Descriptions.md](https://github.com/tetherball88/OStimNet/blob/main/docs/Descriptions.md),
-[Intents.md](https://github.com/tetherball88/OStimNet/blob/main/docs/Intents.md), [Phases.md](https://github.com/tetherball88/OStimNet/blob/main/docs/Phases.md),
-[AnimationPacks.md](https://github.com/tetherball88/OStimNet/blob/main/docs/AnimationPacks.md); OStim Navigator source
+Sources: OStimNet [README](https://github.com/tetherball88/OStimNet), [Descriptions.md](https://github.com/tetherball88/OStimNet/blob/master/docs/Descriptions.md),
+[Intents.md](https://github.com/tetherball88/OStimNet/blob/master/docs/Intents.md), [Phases.md](https://github.com/tetherball88/OStimNet/blob/master/docs/Phases.md),
+[AnimationPacks.md](https://github.com/tetherball88/OStimNet/blob/master/docs/AnimationPacks.md); OStim Navigator source
 `OStimNetMetaData.cpp`, `SceneDatabase.cpp`, `SceneDescriptionData.h` ([repo](https://github.com/tetherball88/OStimNavigator)).
 
 ## 7. What was changed and why
