@@ -159,6 +159,7 @@ Sources: OStimNet [README](https://github.com/tetherball88/OStimNet), [Descripti
 
 - All intents for packs you don't have are ignored. The optional file also carries every OStimNet 2.5.7 and Billy v3
   entry, and replaces v3's blanket "lustful" on Billyy scenes with the rule results.
+- **v1.0.2 file rename:** the OCreatures Reforged description file is now `zz OCreatures Reforged SkyrimNet Patch.json`, so it no longer shares a name with an older `zz OCreatures SkyrimNet Patch.json` patch. If you installed v1.0.1, delete the old-named file from that mod.
 - **v1.0.1 style fix:** descriptions no longer end with "(Stage x of y.)", matching the style of the descriptions
   OStimNet ships.
 - **Data errors in her scene files:** 41 Baka and 37 FlufyFox stages point an action at the

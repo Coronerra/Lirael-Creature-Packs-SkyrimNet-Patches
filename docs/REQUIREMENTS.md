@@ -42,7 +42,7 @@ the `data_notes` column of `data/*.csv` for her if she wants them. Nothing here 
   must never repeat ids the pack already describes.
 - The MCM option *Use custom descriptions* (default on) picks custom over auto-generated.
 
-How we meet it: one file per pack named `zz <Pack> SkyrimNet Patch.json`, only ids with no existing description
+How we meet it: one file per pack named `zz <Pack> SkyrimNet Patch.json` (OCreatures Reforged uses `zz OCreatures Reforged SkyrimNet Patch.json`), only ids with no existing description
 (Billyy 2.1.2 is skipped entirely because she ships her own).
 
 ## 4. Intents and positions (OStimNetMetaData.json)

@@ -12,6 +12,7 @@ DT = lambda d: zipfile.ZipInfo(d, date_time=(2026, 11, 2, 0, 0, 0))
 def w(z, name, text):
     i = DT(name); i.compress_type = zipfile.ZIP_DEFLATED; i.external_attr = 0o644 << 16; z.writestr(i, text)
 for key, short, full, ver in PACKS:
+    fname = 'OCreatures Reforged' if short == 'OCreatures' else short  # avoid clash with older 'zz OCreatures SkyrimNet Patch.json'
     zp = os.path.join(out, '%s_SkyrimNet_Patch_for_v%s.zip' % (short, ver))
     desc = open(os.path.join(data, key + '_descriptions.json'), encoding='utf-8').read()
     readme = f"""{short} SkyrimNet Patch for v{ver}
@@ -25,7 +26,7 @@ This patch was generated from that exact version. It may not match other version
 Also requires: OStim Standalone, OStimNet, OStim Navigator (descriptions are read by OStim Navigator).
 
 What it is: a pure add-on. It contains ONE file of scene descriptions for SkyrimNet/OStimNet:
-  SKSE/Plugins/OStimNet/animationsDescriptions/zz {short} SkyrimNet Patch.json
+  SKSE/Plugins/OStimNet/animationsDescriptions/zz {fname} SkyrimNet Patch.json
 None of Lirael Atelier's files are included, and none of her files are overwritten or edited.
 
 Install (MO2): install as a new mod and place it directly BELOW {full}.
@@ -37,7 +38,7 @@ Sources, rules and per-scene notes: the Lirael-Creature-Packs-SkyrimNet-Patches 
 License: MIT for this patch's own metadata only. The animations belong to their authors.
 """
     with zipfile.ZipFile(zp, 'w') as z:
-        w(z, 'SKSE/Plugins/OStimNet/animationsDescriptions/zz %s SkyrimNet Patch.json' % short, desc)
+        w(z, 'SKSE/Plugins/OStimNet/animationsDescriptions/zz %s SkyrimNet Patch.json' % fname, desc)
         w(z, 'README.txt', readme)
     print(zp, os.path.getsize(zp))
 tmp = os.path.join(out, '_meta.json')
