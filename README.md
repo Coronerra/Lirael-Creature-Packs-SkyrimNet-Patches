@@ -1,6 +1,6 @@
 # Lirael Creature Packs - SkyrimNet Patches
 
-> **Disclaimer: This was AI generated.** I'm not into bestiality and won't subject myself to reviewing all of these animations, so if anyone is willing to go through them all and make a proper mod, please be my guest. This is just a crude add-on to help SkyrimNet NPCs understand the scenes, and I'm sure there are mistakes.
+> **Disclaimer: This was AI generated.** I'm not into bestiality and won't subject myself to reviewing all of these animations, so if anyone is willing to go through them all and make a proper mod, please be my guest. This is just a crude add-on to help SkyrimNet NPCs understand the scenes, and I'm sure there are mistakes. **These patches are UNTESTED in game.** I haven't run them and I'm not going to. This is merely to help those who are into it.
 
 SkyrimNet / OStimNet scene descriptions and intents for Lirael Atelier's creature animation packs.
 By That Guy (Coronerra).
@@ -17,7 +17,7 @@ overwritten or edited. Her packs are required: https://www.patreon.com/LiraelAte
 
 Billyy 2.1.2 already ships her own descriptions, so it only gets intents (for the 225 series she left untagged).
 
-Tested on a modified Nolvus 6.0.21 (OStim Navigator 2.2.0, OStimNet 2.5.7).
+Built against a modified Nolvus 6.0.21 setup (OStim Navigator 2.2.0, OStimNet 2.5.7). Not tested in game.
 
 ## Install (MO2)
 - Each description patch: its own mod, directly below the pack it is for.

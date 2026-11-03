@@ -6,7 +6,8 @@ out = sys.argv[3]; os.makedirs(out, exist_ok=True)
 LINK = 'https://www.patreon.com/LiraelAtelier'
 NOTE = ("This was AI generated. I'm not into bestiality and won't subject myself to reviewing all of these\n"
         "animations, so if anyone is willing to go through them all and make a proper mod, please be my guest.\n"
-        "This is just a crude add-on to help SkyrimNet NPCs, and I'm sure there are mistakes.\n")
+        "This is just a crude add-on to help SkyrimNet NPCs, and I'm sure there are mistakes.\n"
+        "UNTESTED in game: I haven't run these and won't. This is merely to help those who are into it.\n")
 PACKS = [('fluffyfox', 'FluffyFox', 'FlufyFox OStim - Creatures', '0.5.2'),
          ('baka', 'Baka', 'OCreatures - Baka Animation Pack', '0.1-dev'),
          ('ocreatures', 'OCreatures', 'OCreatures Reforged', '1.9')]
